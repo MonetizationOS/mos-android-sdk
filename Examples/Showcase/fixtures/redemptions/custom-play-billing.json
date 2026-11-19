@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "eventId": "{{eventId}}",
+  "action": {
+    "type": "custom:play-billing",
+    "properties": { "productId": "{{productId}}", "basePlanId": "{{basePlanId}}" }
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+# Gradle / Kotlin / Android
+.gradle/
+.kotlin/
+build/
+local.properties
+.idea/
+*.iml
+node_modules/

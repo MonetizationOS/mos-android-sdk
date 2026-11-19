@@ -1,0 +1,717 @@
+public abstract interface class com/monetizationos/sdk/Action {
+	public abstract fun getProperties ()Lkotlinx/serialization/json/JsonObject;
+}
+
+public final class com/monetizationos/sdk/Action$Custom : com/monetizationos/sdk/Action {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getProperties ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/Action$Navigate : com/monetizationos/sdk/Action {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getProperties ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/Action$NoAction : com/monetizationos/sdk/Action {
+	public final fun component1 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getProperties ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/AppClient {
+	public final fun call-7Yrd8eY (Ljava/lang/String;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun call-7Yrd8eY (Ljava/util/List;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun call-7Yrd8eY$default (Lcom/monetizationos/sdk/AppClient;Ljava/lang/String;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun call-7Yrd8eY$default (Lcom/monetizationos/sdk/AppClient;Ljava/util/List;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun getNamespace ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/AppInfo {
+	public static final field Companion Lcom/monetizationos/sdk/AppInfo$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;)Lcom/monetizationos/sdk/AppInfo;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/AppInfo;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/AppInfo;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getName ()Ljava/lang/String;
+	public final fun getVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/AppInfo$Companion {
+}
+
+public abstract interface class com/monetizationos/sdk/CachePolicy {
+}
+
+public final class com/monetizationos/sdk/CachePolicy$CacheFirst : com/monetizationos/sdk/CachePolicy {
+	public synthetic fun <init> (JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-UwyO8pc ()J
+	public final fun copy-LRDsOJo (J)Lcom/monetizationos/sdk/CachePolicy$CacheFirst;
+	public static synthetic fun copy-LRDsOJo$default (Lcom/monetizationos/sdk/CachePolicy$CacheFirst;JILjava/lang/Object;)Lcom/monetizationos/sdk/CachePolicy$CacheFirst;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxAge-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/CachePolicy$CacheOnly : com/monetizationos/sdk/CachePolicy {
+	public static final field INSTANCE Lcom/monetizationos/sdk/CachePolicy$CacheOnly;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/CachePolicy$NetworkFirst : com/monetizationos/sdk/CachePolicy {
+	public static final field INSTANCE Lcom/monetizationos/sdk/CachePolicy$NetworkFirst;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/CachePolicy$NetworkOnly : com/monetizationos/sdk/CachePolicy {
+	public static final field INSTANCE Lcom/monetizationos/sdk/CachePolicy$NetworkOnly;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/DecisionResult {
+	public final fun getDecision ()Lcom/monetizationos/sdk/decision/Decision;
+	public final fun getFailure ()Lcom/monetizationos/sdk/Failure;
+	public final fun getLinkedAnonymousIdentifier ()Z
+	public final fun getSource ()Lcom/monetizationos/sdk/DecisionSource;
+	public final fun hasAccess (Ljava/lang/String;Ljava/lang/String;)Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/DecisionSource {
+}
+
+public final class com/monetizationos/sdk/DecisionSource$Cache : com/monetizationos/sdk/DecisionSource {
+	public final fun component1 ()J
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgeMs ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/DecisionSource$Fallback : com/monetizationos/sdk/DecisionSource {
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAgeMs ()J
+	public final fun getFromResourceId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/DecisionSource$Network : com/monetizationos/sdk/DecisionSource {
+	public static final field INSTANCE Lcom/monetizationos/sdk/DecisionSource$Network;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/DecisionSource$Unavailable : com/monetizationos/sdk/DecisionSource {
+	public static final field INSTANCE Lcom/monetizationos/sdk/DecisionSource$Unavailable;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/EndpointMethod : java/lang/Enum {
+	public static final field Delete Lcom/monetizationos/sdk/EndpointMethod;
+	public static final field Get Lcom/monetizationos/sdk/EndpointMethod;
+	public static final field Patch Lcom/monetizationos/sdk/EndpointMethod;
+	public static final field Post Lcom/monetizationos/sdk/EndpointMethod;
+	public static final field Put Lcom/monetizationos/sdk/EndpointMethod;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/monetizationos/sdk/EndpointMethod;
+	public static fun values ()[Lcom/monetizationos/sdk/EndpointMethod;
+}
+
+public final class com/monetizationos/sdk/EndpointResponse {
+	public fun <init> (ILjava/util/Map;[B)V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBody ()[B
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getJson ()Lkotlinx/serialization/json/JsonElement;
+	public final fun getStatus ()I
+	public final fun getText ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isSuccess ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/EndpointResult {
+}
+
+public final class com/monetizationos/sdk/EndpointResult$Failed : com/monetizationos/sdk/EndpointResult {
+	public final fun component1 ()Lcom/monetizationos/sdk/Failure;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFailure ()Lcom/monetizationos/sdk/Failure;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/EndpointResult$Response : com/monetizationos/sdk/EndpointResult {
+	public final fun component1 ()Lcom/monetizationos/sdk/EndpointResponse;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getResponse ()Lcom/monetizationos/sdk/EndpointResponse;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/Failure {
+	public fun <init> (Lcom/monetizationos/sdk/FailureReason;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
+	public synthetic fun <init> (Lcom/monetizationos/sdk/FailureReason;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/monetizationos/sdk/FailureReason;
+	public final fun component2 ()Ljava/lang/Integer;
+	public final fun component3 ()Ljava/lang/Integer;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Lcom/monetizationos/sdk/FailureReason;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)Lcom/monetizationos/sdk/Failure;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/Failure;Lcom/monetizationos/sdk/FailureReason;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/Failure;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getReason ()Lcom/monetizationos/sdk/FailureReason;
+	public final fun getStatus ()Ljava/lang/Integer;
+	public final fun getStatusCode ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/FailureReason : java/lang/Enum {
+	public static final field ApiError Lcom/monetizationos/sdk/FailureReason;
+	public static final field HttpError Lcom/monetizationos/sdk/FailureReason;
+	public static final field InvalidJson Lcom/monetizationos/sdk/FailureReason;
+	public static final field InvalidResponse Lcom/monetizationos/sdk/FailureReason;
+	public static final field NotConfigured Lcom/monetizationos/sdk/FailureReason;
+	public static final field RateLimited Lcom/monetizationos/sdk/FailureReason;
+	public static final field RequestFailed Lcom/monetizationos/sdk/FailureReason;
+	public static final field Timeout Lcom/monetizationos/sdk/FailureReason;
+	public static final field Unauthorized Lcom/monetizationos/sdk/FailureReason;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/monetizationos/sdk/FailureReason;
+	public static fun values ()[Lcom/monetizationos/sdk/FailureReason;
+}
+
+public final class com/monetizationos/sdk/FlushResult {
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()Lcom/monetizationos/sdk/Failure;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDropped ()I
+	public final fun getFailure ()Lcom/monetizationos/sdk/Failure;
+	public final fun getRemaining ()I
+	public final fun getSent ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/IdentifyResult {
+	public final fun component1 ()Z
+	public final fun component2 ()Lcom/monetizationos/sdk/IdentityKind;
+	public final fun component3 ()Lcom/monetizationos/sdk/IdentityKind;
+	public final fun component4 ()Z
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getChanged ()Z
+	public final fun getCurrent ()Lcom/monetizationos/sdk/IdentityKind;
+	public final fun getLinkPending ()Z
+	public final fun getPrevious ()Lcom/monetizationos/sdk/IdentityKind;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/IdentityConfig {
+	public fun <init> ()V
+	public fun <init> (Lkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/identity/IdentityStore;Ljava/lang/String;)V
+	public synthetic fun <init> (Lkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/identity/IdentityStore;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lkotlin/jvm/functions/Function1;
+	public final fun component2 ()Lcom/monetizationos/sdk/identity/IdentityStore;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Lkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/identity/IdentityStore;Ljava/lang/String;)Lcom/monetizationos/sdk/IdentityConfig;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/IdentityConfig;Lkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/identity/IdentityStore;Ljava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/IdentityConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getClaimKey ()Ljava/lang/String;
+	public final fun getJwtProvider ()Lkotlin/jvm/functions/Function1;
+	public final fun getStore ()Lcom/monetizationos/sdk/identity/IdentityStore;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/IdentityKind : java/lang/Enum {
+	public static final field Anonymous Lcom/monetizationos/sdk/IdentityKind;
+	public static final field Jwt Lcom/monetizationos/sdk/IdentityKind;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/monetizationos/sdk/IdentityKind;
+	public static fun values ()[Lcom/monetizationos/sdk/IdentityKind;
+}
+
+public abstract interface annotation class com/monetizationos/sdk/InternalMosApi : java/lang/annotation/Annotation {
+}
+
+public final class com/monetizationos/sdk/MOS {
+	public static final field Companion Lcom/monetizationos/sdk/MOS$Companion;
+	public final fun anonymousIdentifier (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun app (Ljava/lang/String;)Lcom/monetizationos/sdk/AppClient;
+	public final fun callEndpoint-rl3MWlM (Ljava/lang/String;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun callEndpoint-rl3MWlM (Ljava/util/List;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun callEndpoint-rl3MWlM$default (Lcom/monetizationos/sdk/MOS;Ljava/lang/String;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public static synthetic fun callEndpoint-rl3MWlM$default (Lcom/monetizationos/sdk/MOS;Ljava/util/List;Lcom/monetizationos/sdk/EndpointMethod;Lkotlinx/serialization/json/JsonElement;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Lkotlin/time/Duration;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun clearCache (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun decide (Lcom/monetizationos/sdk/Resource;Lkotlinx/serialization/json/JsonObject;Lcom/monetizationos/sdk/CachePolicy;Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun decide$default (Lcom/monetizationos/sdk/MOS;Lcom/monetizationos/sdk/Resource;Lkotlinx/serialization/json/JsonObject;Lcom/monetizationos/sdk/CachePolicy;Ljava/lang/String;Ljava/util/List;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun flush (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun identify (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun redeem (Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun redeem$default (Lcom/monetizationos/sdk/MOS;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public final fun reset (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/monetizationos/sdk/MOS$Companion {
+	public final fun inMemory (Lcom/monetizationos/sdk/MOSConfig;)Lcom/monetizationos/sdk/MOS;
+}
+
+public final class com/monetizationos/sdk/MOSConfig {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/monetizationos/sdk/AppInfo;Ljava/lang/String;Lcom/monetizationos/sdk/IdentityConfig;Lcom/monetizationos/sdk/OfflineConfig;JLkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/transport/HttpTransport;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/monetizationos/sdk/AppInfo;Ljava/lang/String;Lcom/monetizationos/sdk/IdentityConfig;Lcom/monetizationos/sdk/OfflineConfig;JLkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/transport/HttpTransport;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lcom/monetizationos/sdk/AppInfo;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Lcom/monetizationos/sdk/IdentityConfig;
+	public final fun component6 ()Lcom/monetizationos/sdk/OfflineConfig;
+	public final fun component7-UwyO8pc ()J
+	public final fun component8 ()Lkotlin/jvm/functions/Function1;
+	public final fun component9 ()Lcom/monetizationos/sdk/transport/HttpTransport;
+	public final fun copy-zIkEtRU (Ljava/lang/String;Ljava/lang/String;Lcom/monetizationos/sdk/AppInfo;Ljava/lang/String;Lcom/monetizationos/sdk/IdentityConfig;Lcom/monetizationos/sdk/OfflineConfig;JLkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/transport/HttpTransport;)Lcom/monetizationos/sdk/MOSConfig;
+	public static synthetic fun copy-zIkEtRU$default (Lcom/monetizationos/sdk/MOSConfig;Ljava/lang/String;Ljava/lang/String;Lcom/monetizationos/sdk/AppInfo;Ljava/lang/String;Lcom/monetizationos/sdk/IdentityConfig;Lcom/monetizationos/sdk/OfflineConfig;JLkotlin/jvm/functions/Function1;Lcom/monetizationos/sdk/transport/HttpTransport;ILjava/lang/Object;)Lcom/monetizationos/sdk/MOSConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getApiBaseUrl ()Ljava/lang/String;
+	public final fun getApp ()Lcom/monetizationos/sdk/AppInfo;
+	public final fun getIdentity ()Lcom/monetizationos/sdk/IdentityConfig;
+	public final fun getOffline ()Lcom/monetizationos/sdk/OfflineConfig;
+	public final fun getOnLog ()Lkotlin/jvm/functions/Function1;
+	public final fun getPublicKey ()Ljava/lang/String;
+	public final fun getRequestTimeout-UwyO8pc ()J
+	public final fun getSurface ()Ljava/lang/String;
+	public final fun getTransport ()Lcom/monetizationos/sdk/transport/HttpTransport;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/OfflineConfig {
+	public fun <init> ()V
+	public synthetic fun <init> (JZZIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (JZZIZLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-UwyO8pc ()J
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()I
+	public final fun component5 ()Z
+	public final fun copy-gRj5Bb8 (JZZIZ)Lcom/monetizationos/sdk/OfflineConfig;
+	public static synthetic fun copy-gRj5Bb8$default (Lcom/monetizationos/sdk/OfflineConfig;JZZIZILjava/lang/Object;)Lcom/monetizationos/sdk/OfflineConfig;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEnforceMeters ()Z
+	public final fun getFailOpen ()Z
+	public final fun getFallbackToLatest ()Z
+	public final fun getMaxEntries ()I
+	public final fun getTtl-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/PriceProvider {
+	public abstract fun prices (Ljava/util/Set;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/monetizationos/sdk/RedemptionResult {
+}
+
+public final class com/monetizationos/sdk/RedemptionResult$Declined : com/monetizationos/sdk/RedemptionResult {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getEventId ()Ljava/lang/String;
+	public final fun getMessage ()Ljava/lang/String;
+	public final fun getStatusCode ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/RedemptionResult$Failed : com/monetizationos/sdk/RedemptionResult {
+	public final fun component1 ()Lcom/monetizationos/sdk/Failure;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFailure ()Lcom/monetizationos/sdk/Failure;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/RedemptionResult$Redeemed : com/monetizationos/sdk/RedemptionResult {
+	public final fun component1 ()Lcom/monetizationos/sdk/Action;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAction ()Lcom/monetizationos/sdk/Action;
+	public final fun getEventId ()Ljava/lang/String;
+	public final fun getStatusCode ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/Resource {
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;Lkotlinx/serialization/json/JsonObject;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Lkotlinx/serialization/json/JsonObject;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun copy (Ljava/lang/String;Ljava/util/Map;Lkotlinx/serialization/json/JsonObject;)Lcom/monetizationos/sdk/Resource;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/Resource;Ljava/lang/String;Ljava/util/Map;Lkotlinx/serialization/json/JsonObject;ILjava/lang/Object;)Lcom/monetizationos/sdk/Resource;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExtra ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getMeta ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/StorePrice {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/monetizationos/sdk/StorePrice;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/StorePrice;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/StorePrice;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDisplayPeriod ()Ljava/lang/String;
+	public final fun getDisplayPrice ()Ljava/lang/String;
+	public final fun getIntroductoryDisplayPrice ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/VersionKt {
+	public static final field MOS_VERSION Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/BooleanProperty : com/monetizationos/sdk/decision/Property {
+	public final fun component1 ()Ljava/lang/Boolean;
+	public final fun component2 ()Z
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+	public final fun isFallback ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Component {
+	public final fun component1 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMetadata ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getProperties ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Customer {
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Ljava/util/List;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCustomerIdentifiers ()Ljava/util/List;
+	public final fun getHasProducts ()Z
+	public fun hashCode ()I
+	public final fun isCustomer ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Decision {
+	public static final field Companion Lcom/monetizationos/sdk/decision/Decision$Companion;
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcom/monetizationos/sdk/decision/DecisionIdentity;
+	public final fun component3 ()Lcom/monetizationos/sdk/decision/Customer;
+	public final fun component4 ()Ljava/util/Map;
+	public final fun component5 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component6 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component7 ()Ljava/util/Map;
+	public final fun component8 ()Z
+	public final fun component9 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun experience (Ljava/lang/String;Ljava/lang/String;)Lcom/monetizationos/sdk/decision/Experience;
+	public static synthetic fun experience$default (Lcom/monetizationos/sdk/decision/Decision;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/decision/Experience;
+	public final fun getComponentBehaviors ()Ljava/util/Map;
+	public final fun getComponentsSkipped ()Z
+	public final fun getCustomer ()Lcom/monetizationos/sdk/decision/Customer;
+	public final fun getEventId ()Ljava/lang/String;
+	public final fun getFeatures ()Ljava/util/Map;
+	public final fun getIdentity ()Lcom/monetizationos/sdk/decision/DecisionIdentity;
+	public final fun getRaw ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getSurfaceBehavior ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getSurfaceProperties ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Decision$Companion {
+	public final fun fromJson (Lkotlinx/serialization/json/JsonObject;)Lcom/monetizationos/sdk/decision/Decision;
+}
+
+public final class com/monetizationos/sdk/decision/DecisionIdentity {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lkotlinx/serialization/json/JsonObject;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAuthType ()Ljava/lang/String;
+	public final fun getIdentifier ()Ljava/lang/String;
+	public final fun getJwtClaims ()Lkotlinx/serialization/json/JsonObject;
+	public fun hashCode ()I
+	public final fun isAuthenticated ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/decision/Experience {
+	public static final field Companion Lcom/monetizationos/sdk/decision/Experience$Companion;
+	public abstract fun getOffers ()Ljava/util/List;
+}
+
+public final class com/monetizationos/sdk/decision/Experience$Companion {
+	public final fun decode (Lkotlinx/serialization/json/JsonElement;)Lcom/monetizationos/sdk/decision/Experience;
+}
+
+public final class com/monetizationos/sdk/decision/Experience$Native : com/monetizationos/sdk/decision/Experience {
+	public final fun component1 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/List;
+	public final fun decode (Lkotlinx/serialization/DeserializationStrategy;)Ljava/lang/Object;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Lkotlinx/serialization/json/JsonObject;
+	public fun getOffers ()Ljava/util/List;
+	public final fun getSchema ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Experience$Web : com/monetizationos/sdk/decision/Experience {
+	public final fun component1 ()Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getHtml ()Ljava/lang/String;
+	public fun getOffers ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Feature {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/Map;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFeatureId ()Ljava/lang/String;
+	public final fun getFeatureSlug ()Ljava/lang/String;
+	public final fun getProperties ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Meterable : com/monetizationos/sdk/decision/Property {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Boolean;
+	public final fun component11 ()Ljava/lang/Double;
+	public final fun component12 ()Ljava/lang/Double;
+	public final fun component13 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()Ljava/lang/Double;
+	public final fun component5 ()Ljava/lang/Double;
+	public final fun component6 ()Ljava/lang/Double;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/Boolean;
+	public final fun component9 ()Ljava/lang/Boolean;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConsumedInRequest ()Ljava/lang/Boolean;
+	public final fun getConsumedUnits ()Ljava/lang/Double;
+	public final fun getConsumedUnitsInRequest ()Ljava/lang/Double;
+	public final fun getCounterId ()Ljava/lang/String;
+	public final fun getExcessUnitsInRequest ()Ljava/lang/Double;
+	public final fun getHasAccess ()Z
+	public final fun getLockedOffline ()Z
+	public final fun getPeriodStart ()Ljava/lang/String;
+	public final fun getRemainingUnits ()Ljava/lang/Double;
+	public final fun getResourceIdUsed ()Ljava/lang/Boolean;
+	public final fun getTotalUnits ()Ljava/lang/Double;
+	public final fun getUniqueResources ()Ljava/lang/Boolean;
+	public fun hashCode ()I
+	public final fun isFallback ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/NumberProperty : com/monetizationos/sdk/decision/Property {
+	public final fun component1 ()Ljava/lang/Double;
+	public final fun component2 ()Z
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/Double;
+	public fun hashCode ()I
+	public final fun isFallback ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/Offer {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/time/Instant;
+	public final fun component6 ()Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getExpiresAt ()Ljava/time/Instant;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getPresentation ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getRedemptionSchema ()Ljava/lang/String;
+	public final fun getStoreProductId ()Ljava/lang/String;
+	public final fun getToken ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/OfferSlot {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcom/monetizationos/sdk/decision/Offer;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getOffer ()Lcom/monetizationos/sdk/decision/Offer;
+	public final fun getType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/decision/Property {
+}
+
+public final class com/monetizationos/sdk/decision/StringProperty : com/monetizationos/sdk/decision/Property {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public final fun isFallback ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/decision/UnknownProperty : com/monetizationos/sdk/decision/Property {
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lkotlinx/serialization/json/JsonElement;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRaw ()Lkotlinx/serialization/json/JsonElement;
+	public final fun getType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/identity/IdentityStore {
+	public abstract fun get (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun set (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/monetizationos/sdk/identity/InMemoryIdentityStore : com/monetizationos/sdk/identity/IdentityStore {
+	public fun <init> ()V
+	public fun <init> (Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun get (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun set (Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/monetizationos/sdk/logging/LogEvent {
+	public fun <init> (Lcom/monetizationos/sdk/logging/LogLevel;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;)V
+	public synthetic fun <init> (Lcom/monetizationos/sdk/logging/LogLevel;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/monetizationos/sdk/logging/LogLevel;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lkotlinx/serialization/json/JsonObject;
+	public final fun copy (Lcom/monetizationos/sdk/logging/LogLevel;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;)Lcom/monetizationos/sdk/logging/LogEvent;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/logging/LogEvent;Lcom/monetizationos/sdk/logging/LogLevel;Ljava/lang/String;Ljava/lang/String;Lkotlinx/serialization/json/JsonObject;ILjava/lang/Object;)Lcom/monetizationos/sdk/logging/LogEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCode ()Ljava/lang/String;
+	public final fun getContext ()Lkotlinx/serialization/json/JsonObject;
+	public final fun getLevel ()Lcom/monetizationos/sdk/logging/LogLevel;
+	public final fun getMessage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/logging/LogEventKt {
+	public static final fun getConsoleLogger ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class com/monetizationos/sdk/logging/LogLevel : java/lang/Enum {
+	public static final field Debug Lcom/monetizationos/sdk/logging/LogLevel;
+	public static final field Error Lcom/monetizationos/sdk/logging/LogLevel;
+	public static final field Info Lcom/monetizationos/sdk/logging/LogLevel;
+	public static final field Warn Lcom/monetizationos/sdk/logging/LogLevel;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun getValue ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/monetizationos/sdk/logging/LogLevel;
+	public static fun values ()[Lcom/monetizationos/sdk/logging/LogLevel;
+}
+
+public final class com/monetizationos/sdk/transport/HttpRequest {
+	public fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;JLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;JLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Map;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()J
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;JLjava/lang/String;)Lcom/monetizationos/sdk/transport/HttpRequest;
+	public static synthetic fun copy$default (Lcom/monetizationos/sdk/transport/HttpRequest;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;JLjava/lang/String;ILjava/lang/Object;)Lcom/monetizationos/sdk/transport/HttpRequest;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBody ()Ljava/lang/String;
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getMethod ()Ljava/lang/String;
+	public final fun getTimeoutMs ()J
+	public final fun getUrl ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/monetizationos/sdk/transport/HttpResponse {
+	public fun <init> (ILjava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (ILjava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun <init> (I[BLjava/util/Map;)V
+	public synthetic fun <init> (I[BLjava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getBody ()[B
+	public final fun getHeaders ()Ljava/util/Map;
+	public final fun getStatus ()I
+	public final fun getText ()Ljava/lang/String;
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/monetizationos/sdk/transport/HttpTransport {
+	public abstract fun send (Lcom/monetizationos/sdk/transport/HttpRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/monetizationos/sdk/transport/HttpUrlConnectionTransport : com/monetizationos/sdk/transport/HttpTransport {
+	public fun send (Lcom/monetizationos/sdk/transport/HttpRequest;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
