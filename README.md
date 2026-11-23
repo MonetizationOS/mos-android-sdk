@@ -144,20 +144,22 @@ class PaywallViewModel : ViewModel() {
 
 when (val experience = result.decision?.experience("paywall")) {
     is Experience.Native -> { /* your Compose paywall: experience.content, experience.offers; mos.redeem(offer.token) on tap */ }
-    is Experience.Web -> AndroidView(
-        factory = { context ->
-            MOSWebPaywallView(
-                context = context,
-                html = experience.html,
-                mos = mos,
-                priceProvider = myPrices,              // a PriceProvider backed by your Play Billing code
-                onRedemption = ::handleRedemption,
-                onClose = { dismiss() },
-                retainer = paywallViewModel.retainer,
-            )
-        },
-        onRelease = { it.destroy() },                  // detaches the view; the retained WebView lives on
-    )
+    is Experience.Web -> key(experience.html) {           // the view loads its HTML once, so new HTML needs a new view
+        AndroidView(
+            factory = { context ->
+                MOSWebPaywallView(
+                    context = context,
+                    html = experience.html,
+                    mos = mos,
+                    priceProvider = myPrices,          // a PriceProvider backed by your Play Billing code
+                    onRedemption = ::handleRedemption,
+                    onClose = { dismiss() },
+                    retainer = paywallViewModel.retainer,
+                )
+            },
+            onRelease = { it.destroy() },              // detaches the view; the retained WebView lives on
+        )
+    }
     null -> Unit
     else -> Unit                                       // a kind added in a later release
 }
@@ -167,7 +169,8 @@ fun handleRedemption(redemption: RedemptionResult) {
     when (redemption) {
         is RedemptionResult.Redeemed -> when (val action = redemption.action) {
             is Action.Custom -> startPurchase(action.type, action.properties)   // custom or custom:*, e.g. custom:play-billing: your Play Billing flow
-            is Action.Navigate -> openUrl(action.url)                           // http(s) or your own app's scheme only, see below
+            is Action.Navigate ->                                               // the workflow picks the URL: open only the web and your own scheme
+                if (Uri.parse(action.url).scheme?.lowercase() in setOf("http", "https", "exampleapp")) openUrl(action.url)
             is Action.NoAction -> refreshDecision()                             // decide again: the redemption cleared the cache
             else -> refreshDecision()                                           // an action added in a later release
         }
